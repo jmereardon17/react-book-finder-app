@@ -32,8 +32,6 @@ class App extends Component {
       .catch(error => console.log(error));
   }
 
-  // TODO: Add links to books for more info.
-
   checkInvalidDataEntries = data => {
     // check if the data object contains properties; set if not
     if (!data.imageLinks) {
@@ -54,8 +52,8 @@ class App extends Component {
     data.items.forEach( book => {
       const id = this.prevBookId += 1;
       const verifiedData = this.checkInvalidDataEntries(book.volumeInfo);
-      const { imageLinks: { thumbnail }, title, authors, publisher } = verifiedData;
-      const bookData = { thumbnail, title, authors, publisher, id };
+      const { imageLinks: { thumbnail }, title, authors, publisher, infoLink, previewLink } = verifiedData;
+      const bookData = { thumbnail, title, authors, publisher, infoLink, previewLink, id };
       this.setState( prevState => {
         return {
           bookResults: [...prevState.bookResults, bookData]
@@ -87,6 +85,8 @@ class App extends Component {
                 thumbnail={book.thumbnail}
                 title={book.title}
                 authors={book.authors}
+                infoLink={book.infoLink}
+                previewLink={book.previewLink}
                 key={book.id}
               />
             )}

@@ -38,7 +38,7 @@ main > .row > .col-md-4:nth-child(3n+3) {
 }
 
 .perspective {
-  perspective: 700px;
+  perspective: 450px;
 }
 
 .cover,
@@ -110,6 +110,16 @@ main > .row > .col-md-4:nth-child(3n+3) {
   transform: translate(-100%, 142%) rotateY(270deg);
   -webkit-transform-origin: 121% 50%;
   transform-origin: 121% 50%;
+}
+
+.book-link {
+  display: block;
+}
+
+.book-details {
+  font-size: .75em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .card-title {
