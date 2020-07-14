@@ -1,6 +1,6 @@
 # React Book Finder App
 
-An app that allows users to search for books by entering a query (Title, Author, etc) and displays the resulting books in a list on the page with all the corresponding data from the Google Books API.
+An app that allows users to search for books by entering a book title query and displays the resulting books in a list on the page with all the corresponding data from the Google Books API.
 
 Features:
 
