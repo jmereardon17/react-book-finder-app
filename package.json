@@ -1,6 +1,6 @@
 {
   "homepage": "http://jamiereardon.dev/react-book-finder-app",
-  "name": "book-finder",
+  "name": "react-book-finder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
