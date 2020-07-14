@@ -14,11 +14,14 @@ class App extends Component {
   prevBookId = 1;
 
   bookAPI = 'https://www.googleapis.com/books/v1/volumes?';
+  // q=intitle: - for just searching by book titles.
 
   handleSubmit = (e) => {
-    this.removeBooks();
+    if (this.state.bookResults.length > 0) {
+      this.removeBooks();
+    }
     const query = e.target.value;
-    const searchString = `${this.bookAPI}q=intitle:${query}&hl=as_pt=BOOKS&cd=1}`;
+    const searchString = `${this.bookAPI}q=${query}&printType=books&maxResults=39`;
     query.length === 0
       ? this.removeBooks()
       : this.fetchData(searchString);
@@ -49,16 +52,19 @@ class App extends Component {
   }
 
   generateBooks = data => {
+    // create new array to hold a reference to the book data.
+    const books = [];
     data.items.forEach( book => {
       const id = this.prevBookId += 1;
       const verifiedData = this.checkInvalidDataEntries(book.volumeInfo);
       const { imageLinks: { thumbnail }, title, authors, publisher, infoLink, previewLink } = verifiedData;
       const bookData = { thumbnail, title, authors, publisher, infoLink, previewLink, id };
-      this.setState( prevState => {
-        return {
-          bookResults: [...prevState.bookResults, bookData]
-        };
-      });
+      books.push(bookData);
+    });
+    this.setState(prevState => {
+      return {
+        bookResults: prevState.bookResults = books
+      };
     });
   }
 
