@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-book-finder-app/static/css/main.0eada5a1.chunk.css",
+    "main.js": "/react-book-finder-app/static/js/main.bf4c900a.chunk.js",
+    "main.js.map": "/react-book-finder-app/static/js/main.bf4c900a.chunk.js.map",
+    "runtime-main.js": "/react-book-finder-app/static/js/runtime-main.1a177e76.js",
+    "runtime-main.js.map": "/react-book-finder-app/static/js/runtime-main.1a177e76.js.map",
+    "static/js/2.3376d3ef.chunk.js": "/react-book-finder-app/static/js/2.3376d3ef.chunk.js",
+    "static/js/2.3376d3ef.chunk.js.map": "/react-book-finder-app/static/js/2.3376d3ef.chunk.js.map",
+    "index.html": "/react-book-finder-app/index.html",
+    "precache-manifest.2997f0884c2229483213fd2f32ab9af8.js": "/react-book-finder-app/precache-manifest.2997f0884c2229483213fd2f32ab9af8.js",
+    "service-worker.js": "/react-book-finder-app/service-worker.js",
+    "static/css/main.0eada5a1.chunk.css.map": "/react-book-finder-app/static/css/main.0eada5a1.chunk.css.map",
+    "static/js/2.3376d3ef.chunk.js.LICENSE.txt": "/react-book-finder-app/static/js/2.3376d3ef.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/react-book-finder-app/static/media/glasses-outline.b6754f74.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a177e76.js",
+    "static/js/2.3376d3ef.chunk.js",
+    "static/css/main.0eada5a1.chunk.css",
+    "static/js/main.bf4c900a.chunk.js"
+  ]
+}
