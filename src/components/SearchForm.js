@@ -7,8 +7,8 @@ const SearchForm = (props) => {
         type="text"
         className="form-control mx-auto shadow-sm"
         id="bookSearch"
-        placeholder="Search for a book ..."
-        aria-label="Search for a book ..."
+        placeholder="Search by title, author, published date etc..."
+        aria-label="Search by title, author, published date etc..."
         aria-describedby="basic-addon1"
         onKeyUp={ props.handleSubmit }
         autoFocus
