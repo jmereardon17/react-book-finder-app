@@ -9,6 +9,7 @@ Features:
 - Object destructuring.
 - Dynamic re-usable components.
 - React event handling.
+- Mobile-first approach responsive layout.
 
 Built using React and Bootstrap.
 
