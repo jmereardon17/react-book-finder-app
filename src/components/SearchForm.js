@@ -2,7 +2,7 @@ import React from 'react';
 
 const SearchForm = (props) => {
   return (
-    <form className="mb-5" >
+    <form className="mb-5">
       <input
         type="text"
         className="form-control mx-auto shadow-sm"

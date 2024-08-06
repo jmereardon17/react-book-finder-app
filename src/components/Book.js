@@ -18,14 +18,9 @@ const Book = (props) => {
           <div className="col-9 col-md-8 pt-3 pb-2">
             <div className="card-body py-0 px-2 pr-2 d-flex flex-column h-100">
               <h5 className="card-title text-dark mb-2" title={props.title}>{props.title}</h5>
-
-              {/* If more than one author, comma separate them */}
-              {Array.isArray(props.authors) && props.authors.length > 1
-                ? <h6 className="authors text-black-50 mb-2" style={{ fontSize: '.8rem' }}>
-                  {props.authors.join(', ')}
-                </h6>
-                : <h6 className="authors text-black-50 mb-2">{props.authors}</h6>}
-                
+              <h6 className="authors text-black-50 mb-2" style={Array.isArray(props.authors) && props.authors.length > 1 ? { fontSize: '.8rem' } : null}>
+                {Array.isArray(props.authors) && props.authors.length > 1 ? props.authors.join(', ') : props.authors}
+              </h6>
               <a className="book-details text-info mt-auto align-self-end mr-2" href={props.infoLink} target="_blank" rel="noopener noreferrer">Details</a>
             </div>
           </div>

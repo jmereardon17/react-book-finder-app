@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from './Header';
+import '../App.css';
 import Book from './Book';
 import Footer from './Footer';
-import '../App.css';
+import Header from './Header';
 
 class App extends Component {
 
@@ -30,8 +30,8 @@ class App extends Component {
   fetchData = api => {
     fetch(api)
       .then(response => response.json())
-      .then(data => this.checkInvalidDataEntries(data))
-      .then(data => this.generateBooks(data))
+      .then(this.checkInvalidDataEntries)
+      .then(this.generateBooks)
       .catch(error => console.log(error));
   }
 
@@ -42,12 +42,8 @@ class App extends Component {
         thumbnail: 'https://www.esm.rochester.edu/uploads/NoPhotoAvailable-710x888.jpg' 
       }
     }
-    if (!data.authors) {
-      data.authors = 'No Author Information';
-    }
-    if (!data.publisher) {
-      data.publisher = 'No Publisher Information';
-    }
+    if (!data.authors) data.authors = 'No Author Information';
+    if (!data.publisher) data.publisher = 'No Publisher Information';
     return data;
   }
 
@@ -61,20 +57,11 @@ class App extends Component {
       const bookData = { thumbnail, title, authors, publisher, infoLink, previewLink, id };
       books.push(bookData);
     });
-    this.setState(prevState => {
-      return {
-        bookResults: prevState.bookResults = books
-      };
-    });
+
+    this.setState(prevState => ({ bookResults: prevState.bookResults = books }));
   }
 
-  removeBooks = () => {
-    this.setState( prevState => {
-      return {
-        bookResults: prevState.bookResults = []
-      };
-    });
-  }
+  removeBooks = () => this.setState( prevState => ({ bookResults: prevState.bookResults = [] }));
 
   render() {
     return (
